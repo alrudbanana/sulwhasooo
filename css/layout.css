@@ -1,0 +1,108 @@
+/* layout */
+.header{
+    position: relative;
+    z-index: 2;  /* sub-menu가 뒤에서 나오기 위해서 */
+}
+
+.header-wrap{
+    /* 정렬 */
+    display: flex;
+    justify-content: space-between;
+    height: 78px;
+    max-width: 1200px;
+    margin: 0 auto; /* 가운데 */
+    padding: 0 7%;
+    position: relative;
+    color: rgb(118, 118, 118);
+    border: 1px solid pink;
+    font-size: 15px;
+}
+
+/* 언어 선택 */
+.select-language{
+    position: relative;
+    padding-top: 16px;
+    font-size: 15px;
+    letter-spacing: -0.05em;
+    width: 25%; 
+    text-align: left;
+}
+
+.select-lang-list{
+    position: absolute;
+    top: 36px;
+    left: 0;
+    padding: 12px 0;
+    margin-top: 10px;
+    border: 1px solid rgb(25, 25, 25);
+    background-color: #fff;
+    z-index: 1000;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+    visibility: hidden;
+}
+
+.select-lang-list a{
+    display: block;
+    padding: 6px 21px 4px 18px;
+    line-height: 19.5px;
+    text-transform: uppercase;
+}
+
+.select-lang-list li:nth-child(1) a{
+    background-color: rgb(238, 238, 238);
+}
+.select-lang-list li:focus,
+.select-lang-list li:hover{
+    color: #000;
+    background-color: rgb(238, 238, 238);
+}
+
+/* 로고 */
+.logo{
+    align-self: center;
+    /* 더 알아보기 */
+}
+.logo img{
+    width: 166px;
+}
+
+/* 매장찾기 */
+.header-link{
+    width: 25%;
+    padding-top: 16px;
+    text-align: right;
+    position: relative;
+}
+
+.header-link a{
+    padding: 0 15px;
+    position: relative;
+}
+
+/* 찾기 -form */
+.search-container{
+    visibility: hidden;
+}
+.search-wrap input{
+    border: 1px solid #000;
+}
+
+.is-active{
+    visibility: visible;
+}
+
+.header-link a::after{
+    content: '';
+    border-left: 1px solid rgb(201, 201, 201);
+    cursor: pointer;
+    height: 13px;
+    position: absolute;
+    top: 20%;
+    left: 98%;
+}
+
+.header-link a:last-child::after{
+    content: '';
+    border: none;
+   
+}
