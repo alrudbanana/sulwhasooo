@@ -17,7 +17,8 @@
 <body>
     <div class="wrap">
         <header>
-            <div class="header-wrap">
+            <!-- l-leader -->
+            <div class="l_leader">
                 <div class="select-language">
                     <a href="#" class="t_lang">
                         한국/한국어
@@ -65,7 +66,7 @@
                 </div>
                 <span class="logo">
                     <a href="#">
-                        <img src="./img/logo_sulwhasoo.png" alt="sulwhasoo">
+                        <img src="./img/sulwhasoo_orange_logo.png" alt="sulwhasoo">
                     </a>
                 </span>
                 <!-- 매장찾기 -->
@@ -73,100 +74,225 @@
                     <a href="#" class="search-shop">매장찾기</a>
                     <a href="#" class="buy">구매하기</a>
                     <a href="#" class="h_open_seach">
-                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-magnifying-glass search-icon">
+                        </i>
                     </a>
                 </div>
             </div>
-            <nav id="gnb">
+            <!-- top search -->
+            <div id="top-search" class="search-container" tabindex="-1">
+                <div class="inner-top-search">
+                    <form action="#">
+                        <div class="wrap-search-box">
+                            <div class="search-box">
+                                <label for="q" class="blind">검색</label>
+                                <input type="search" autocomplete="off" id="q" class="text" placeholder="검색어를 입력해주세요" />
+                                <button type="button" class="submit">
+                                    <span>검색</span>
+                                </button>
+                            </div>
+                            <div class="close-search-box">
+                                <i class="fa-solid fa-angle-up fa-xl close">
+                                </i>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- gnb -->
+            <nav class="gnb">
                 <div class="menu-wrap">
                     <ul class="gnb-menu">
-                        <li>
+                        <li class="gnb_d1">
                             <a href="">
                                 <span>윤조</span>
                             </a>
                         </li>
-                        <li>
+                        <li class="gnb_d1">
                             <a href="">
                                 <span>자음생</span>
                             </a>
                         </li>
-                        <li>
+                        <li class="gnb_d1">
                             <a href="">
                                 <span>진설</span>
                             </a>
                         </li>
-                        <li>
+                        <li class="gnb_d1">
                             <a href="">
                                 <span>기프트</span>
                             </a>
                         </li>
-                        <li>
+                        <li class="gnb_d1 d1_over">
                             <a href="">
                                 <span>제품</span>
                             </a>
+                            <ul class="nav-d2-box">
+                                <li class="nav-d2">
+                                    <a href="#" class="nav-d2-a">
+                                        <span class="nav-d2-span">스킨케어</span>
+                                    </a>
+                                </li>
+                                <li class="nav-d2">
+                                    <a href="#" class="nav-d2-a">
+                                        <span class="nav-d2-span">메이크업</span>
+                                    </a>
+                                </li>
+                                <li class="nav-d2">
+                                    <a href="#" class="nav-d2-a">
+                                        <span class="nav-d2-span">남성</span>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
-                        <li>
+                        <li class="gnb_d1 d1_over">
                             <a href="">
                                 <span>스파</span>
                             </a>
+                            <ul class="nav-d2-box">
+                                <li class="nav-d2">
+                                    <a href="#" class="nav-d2-a">
+                                        <span class="nav-d2-span">소개</span>
+                                    </a>
+                                </li>
+                                <li class="nav-d2">
+                                    <a href="#" class="nav-d2-a">
+                                        <span class="nav-d2-span">소개 프로그램</span>
+                                    </a>
+                                </li>
+                                <li class="nav-d2">
+                                    <a href="#" class="nav-d2-a">
+                                        <span class="nav-d2-span">예약</span>
+                                    </a>
+                                </li>
+                                <li class="nav-d2">
+                                    <a href="#" class="nav-d2-a">
+                                        <span class="nav-d2-span">매장찾기</span>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
-                        <li>
+                        <li class="gnb_d1 d1_over">
                             <a href="">
-                                <span>플래그쉽스토어</span>
+                                <span>플래그십스토어</span>
                             </a>
+                            <ul class="nav-d2-box">
+                                <li class="nav-d2">
+                                    <a href="#" class="nav-d2-a">
+                                        <span class="nav-d2-span">플래그십스토어</span>
+                                    </a>
+                                </li>
+                                <li class="nav-d2">
+                                    <a href="#" class="nav-d2-a">
+                                        <span class="nav-d2-span">설화수 북촌</span>
+                                    </a>
+                                </li>
+                                <li class="nav-d2">
+                                    <a href="#" class="nav-d2-a">
+                                        <span class="nav-d2-span">설화수 도산</span>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
-                        <li>
-
+                        <li class="gnb_d1 d1_over">
                             <a href="">
                                 <span>ABOUT설화수</span>
+                                <ul class="nav-d2-box">
+                                    <li class="nav-d2">
+                                        <a href="#" class="nav-d2-a">
+                                            <span class="nav-d2-span">브랜드 스토리</span>
+                                        </a>
+                                        <ul class="nav-d3-box">
+                                            <li class="nav-d3">
+                                                <a href="#" class="nav-d3-a">
+                                                    <span class="nav-d3-span">브랜드 빌리프</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-d3">
+                                                <a href="#" class="nav-d3-a">
+                                                    <span class="nav-d3-span">브랜드 캠페인</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+
+                                <ul class="nav-d2-box">
+                                    <li class="nav-d2">
+                                        <a href="#" class="nav-d2-a">
+                                            <span class="nav-d2-span">브랜드 엠버서더 </span>
+                                        </a>
+                                        <ul class="nav-d3-box">
+                                            <li class="nav-d3">
+                                                <a href="#" class="nav-d3-a">
+                                                    <span class="nav-d3-span">로제 </span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-d3">
+                                                <a href="#" class="nav-d3-a">
+                                                    <span class="nav-d3-span">틸다 스윈튼</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+
+                                <ul class="nav-d2-box">
+                                    <li class="nav-d2">
+                                        <a href="#" class="nav-d2-a">
+                                            <span class="nav-d2-span">ART</span>
+                                        </a>
+                                        <ul class="nav-d3-box">
+                                            <li class="nav-d3">
+                                                <a href="#" class="nav-d3-a">
+                                                    <span class="nav-d3-span">MET</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-d3">
+                                                <a href="#" class="nav-d3-a">
+                                                    <span class="nav-d3-span">설화 문화전</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul class="nav-d2-box">
+                                    <li class="nav-d2">
+                                        <a href="#" class="nav-d2-a">
+                                            <span class="nav-d2-span">HERITAGE</span>
+                                        </a>
+                                    </li>
+                                    <ul class="nav-d3-box">
+                                        <li class="nav-d3">
+                                            <a href="#" class="nav-d3-a">
+                                                <span class="nav-d3-span">SINCE 1932</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-d3">
+                                            <a href="#" class="nav-d3-a">
+                                                <span class="nav-d3-span">명작 컬렉션</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </ul>
                             </a>
                         </li>
                     </ul>
                 </div>
+                <div class="bg">
+                    
+                </div>
             </nav>
-            
-            <div id="top-search" class="search-container" tabindex="-1">
-                <form action="#">
-                    <divclass="search-wrap">
-                        <div class="inner-search">
-                            <div class="wrap-search-box">
-                                <div class="search-box">
-                                    <label for="q">검색</label>
-                                    <input type="search" id="q" class="text" placeholder="검색어를 입력해주세요">
-                                    <button type="button" class="search-delete"></button>
-                                    <button type="button">
-                                        <span>검색</span>
-                                    </button>
-                                </div>
-                                <div class="close-search-box">
-                                    <i class="fa-solid fa-angle-up"></i>
-                                    <span>닫기</span>
-                                </div>
-                            </div>
-                        </div>
-            </div>
-            </form>
-    </div>
-    <div class="sub_menu">
 
-    </div>
-    </header>
+        </header>
     </div>
     <!-- header -->
     <!-- menu script -->
     <script src="./script/tab_menu.js"></script>
-
-    <nav>
-        <ul>
-            <li>윤조</li>
-            <li>자음생</li>
-            <li>진설</li>
-            <li>기프트</li>
-            <li>제품</li>
-            <li>플래그십 스토어</li>
-            <li>ABOUT 설화수</li>
-        </ul>
-    </nav>
+    <!-- nav -->
+    <script src="./script/nav.js"></script>
+    <!-- search-box -->
+    <script src="/script/search_box.js"></script>
     <!-- script -->
 </body>
 

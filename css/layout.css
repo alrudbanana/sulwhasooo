@@ -1,12 +1,13 @@
 /* layout */
 .header{
     position: relative;
-    z-index: 2;  /* sub-menu가 뒤에서 나오기 위해서 */
+    /* sub-menu가 뒤에서 나오기 위해서 */
+    z-index: 1;
 }
 
-.header-wrap{
-    /* 정렬 */
+.l_leader{
     display: flex;
+    /* border: 1px solid pink; */
     justify-content: space-between;
     height: 78px;
     max-width: 1200px;
@@ -14,7 +15,6 @@
     padding: 0 7%;
     position: relative;
     color: rgb(118, 118, 118);
-    border: 1px solid pink;
     font-size: 15px;
 }
 
@@ -29,6 +29,7 @@
 }
 
 .select-lang-list{
+    visibility: hidden;
     position: absolute;
     top: 36px;
     left: 0;
@@ -36,9 +37,9 @@
     margin-top: 10px;
     border: 1px solid rgb(25, 25, 25);
     background-color: #fff;
-    z-index: 1000;
+    z-index: 10;
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
-    visibility: hidden;
+   
 }
 
 .select-lang-list a{
@@ -51,6 +52,7 @@
 .select-lang-list li:nth-child(1) a{
     background-color: rgb(238, 238, 238);
 }
+
 .select-lang-list li:focus,
 .select-lang-list li:hover{
     color: #000;
@@ -71,38 +73,177 @@
     width: 25%;
     padding-top: 16px;
     text-align: right;
+}
+
+.header-link > a{
+    display: inline-block;
+    margin: 0 .2em;
+    padding: 1px 8px 0 10px;
+    font-size: 12px;
     position: relative;
 }
 
-.header-link a{
-    padding: 0 15px;
-    position: relative;
+.header-link > a:after{
+    display: block;
+    content: '';
+    position: absolute;
+    top: 1px;
+    right: -4px;
+    width: 1px;
+    height: 13px;
+    border-left: 1px solid rgb(201, 201, 201);
+    cursor: pointer;
+    background-color: #eee;
 }
 
-/* 찾기 -form */
+.header-link > a:nth-child(3)::after{
+    display: none;
+}
+
+/* top search */
 .search-container{
     visibility: hidden;
+    background-color: #fff;
+    width: 100%;
+    z-index: 100;
+    position: fixed;
+    top: 78px;
+    left: 0;
 }
-.search-wrap input{
-    border: 1px solid #000;
+
+.wrap-search-box{
+    width: 100%;
+    padding-top: 52px;
+    box-sizing: border-box;
+}
+
+.search-box{
+    display: flex;
+    position: relative;
+    max-width: 700px;
+    padding-top: 8px;
+    padding-bottom: 55px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.text{
+    position: relative;
+    box-sizing: border-box;
+    width: calc(100% - 100px);
+    height: 52px;
+    overflow: hidden;
+    vertical-align: middle;
+    padding: 8px 12px 8px 50px;
+    border-bottom: 2px solid #222;
+    /* background img */
+    background-image: url(../img/newsulwhasoo_hd_black_search_220902.png);
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    background-origin: padding-box;
+    background-size: auto;
+    background-attachment: scroll;
+    background-position-x: 15px;
+    background-position-y: 50%;
+}
+
+.submit{
+    position: absolute;
+    top: 8px;
+    right: 0;
+    width: 90px;
+    height: 52px;
+    padding: 0;
+    border: 0;
+    font-size: 16px;
+    color: #fff;
+    background-color: #222;
+    text-align: center;
+    font-weight: 700;
+}
+
+.close-search-box{
+    width: 100%;
+    height: 45px;
+    box-sizing: border-box;
+    display: flex;
+    padding-bottom: 9px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+/* gnb nav */
+#gnb{
+    padding: 0;
+    vertical-align: center;
+    position: relative;
+    width: 100%;
+}
+
+.gnb-menu{
+    display: flex;
+    justify-content: space-between;
+    max-width: 882px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.gnb-menu.is-active {
+    border-bottom: 1px solid #d5d5d5;
+}
+
+.d1_over:hover{
+    position: relative;
+}
+
+.gnb-menu li{
+    padding: 10px 0;
+    border-bottom: 3px solid transparent;
+    transition: border-bottom 0.3s ease-out;
+}
+
+.gnb-menu span{
+    font-size: 16px;
+}
+
+.nav-d2-box{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    white-space: nowrap;
+    display: none;
+    margin: 0;
+}
+
+.nav-d2{
+    display: inline-block;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.nav-d2-a{
+    display: block;
+    padding: 4px 15px 6px;
+    font-size: 15px;
+    letter-spacing: 0;
+}
+
+.show{
+    display: block;
+}
+
+.bg{
+    flex-direction: row; /* 기본값이지만 명시적으로 지정 */
+    width: 100%;
+    position: relative;
 }
 
 .is-active{
     visibility: visible;
 }
 
-.header-link a::after{
-    content: '';
-    border-left: 1px solid rgb(201, 201, 201);
-    cursor: pointer;
-    height: 13px;
-    position: absolute;
-    top: 20%;
-    left: 98%;
-}
 
-.header-link a:last-child::after{
-    content: '';
-    border: none;
-   
+.nav-d3-box{
+   padding: 5px 15px;
 }
