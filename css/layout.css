@@ -1,8 +1,9 @@
 /* layout */
-.header{
+header{
     position: relative;
     /* sub-menu가 뒤에서 나오기 위해서 */
     z-index: 1;
+    background-color: #ffffff00
 }
 
 .l_leader{
@@ -109,9 +110,6 @@
     position: fixed;
     top: 78px;
     left: 0;
-}
-
-.wrap-search-box{
     width: 100%;
     padding-top: 52px;
     box-sizing: border-box;
@@ -172,12 +170,17 @@
     flex-wrap: wrap;
 }
 /* gnb nav */
-#gnb{
+.gnb{
     padding: 0;
     vertical-align: center;
     position: relative;
     width: 100%;
+    transition: background-color 0.3s ease-in;
 }
+.gnb:hover{
+    background-color: #fff;
+}
+
 
 .gnb-menu{
     display: flex;
@@ -187,7 +190,12 @@
     position: relative;
 }
 
-.gnb-menu.is-active {
+.gnb-menu > li{
+    display: inline-block;
+}
+
+
+.gnb-menu:hover{
     border-bottom: 1px solid #d5d5d5;
 }
 
@@ -200,6 +208,9 @@
     border-bottom: 3px solid transparent;
     transition: border-bottom 0.3s ease-out;
 }
+.gnb-menu li:hover{
+    border-bottom:  3px solid #222;
+}
 
 .gnb-menu span{
     font-size: 16px;
@@ -208,13 +219,17 @@
 .nav-d2-box{
     position: absolute;
     top: 100%;
-    left: 0;
     width: 100%;
     padding-top: 5px;
     padding-bottom: 20px;
     white-space: nowrap;
     display: none;
     margin: 0;
+}
+
+.nav-d2-box.show{
+    display: inline-block;
+    width: fit-content;
 }
 
 .nav-d2{
@@ -234,9 +249,7 @@
 }
 
 .bg{
-    flex-direction: row; /* 기본값이지만 명시적으로 지정 */
     width: 100%;
-    position: relative;
 }
 
 .is-active{
