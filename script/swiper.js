@@ -1,6 +1,6 @@
 var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 'auto',
-    spaceBetween: 0,
+    slidesPerView: 1,
+    spaceBetween: 80,
     pagination: {
       el: ".swiper-pagination",
       type: "progressbar",
@@ -21,13 +21,17 @@ swiper.autoplay.start();
 
 var count = 0;
 // play & stop
-document.querySelector('.control-btn').addEventListener('click',function(){
+const playButton =document.querySelector('.control-btn')
+playButton.addEventListener('click',function(){
     count++;
     console.log(count)
     if(count % 2 == 1){
         swiper.autoplay.stop();
-    }else{
+        playButton.style.backgroundImage= 'url("/img/pause-solid.svg")';
+
+    }else if(count % 2 == 0){
         swiper.autoplay.start();
+        playButton.style.backgroundImage= 'url("/img/play.png")';
     }
     
 })
