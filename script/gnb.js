@@ -2,7 +2,7 @@ $(function(){
     const gnb = $('.gnb')// gnb메뉴 
     const gnb_menu_list = $('.d1_over')
     
-    const sub_menu = $('.d1_over > .nav-d2-box')
+    const sub_menu = $('.d1_over > .nav-d2-box > li')
     const bg = document.querySelector('.bg');
 
     console.log(sub_menu)
