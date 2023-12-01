@@ -35,3 +35,18 @@ playButton.addEventListener('click',function(){
     }
     
 })
+
+var subSwiper = new Swiper(".subSwiper", {
+  slidesPerView: '3',
+  spaceBetween: 24,
+  pagination: {
+    el: ".swiper-pagination",
+    type: "progressbar",
+  },
+  loop : true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
