@@ -50,3 +50,15 @@ var subSwiper = new Swiper(".subSwiper", {
   },
 });
 
+// instar Swiper
+var subSwiper = new Swiper(".instarSwiper", {
+  slidesPerView: 'auto',
+  loop : true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+
+
