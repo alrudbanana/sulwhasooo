@@ -2,7 +2,13 @@
 header {
     position: relative;
     /* sub-menu가 뒤에서 나오기 위해서 */
-    z-index: 1;
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .l_leader {
@@ -65,14 +71,7 @@ header {
     position: relative;
 }
 
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    color: #fff;
-}
+
 
 #header-link {
     color: #fff;
@@ -82,6 +81,7 @@ header:hover {
     background-color: #fff;
     color: #000;
 }
+
 
 header::before {
     content: "";
@@ -152,8 +152,6 @@ header::before {
     box-sizing: border-box;
 }
 
-
-
 .search-box {
     display: flex;
     position: relative;
@@ -212,83 +210,83 @@ header::before {
 /* gnb nav */
 .gnb {
     padding: 0;
-    vertical-align: center;
+    position: relative;
+    
+}
+
+.menu-wrap{
     position: relative;
     width: 100%;
-    transition: background-color 0.3s ease-in;
 }
-
-.gnb:hover {
-    background-color: #fff;
-}
-
-
-.gnb-menu {
+/* ul만 사이즈를 조절하면 되니까 */
+.gnb-menu{
+    max-width: 772px;
     display: flex;
+    box-sizing: border-box;
     justify-content: space-between;
-    max-width: 882px;
     margin: 0 auto;
-    position: relative;
-}
-
-.gnb-menu>li {
-    display: inline-block;
-}
-
-
-.gnb-menu:hover {
-    border-bottom: 1px solid #d5d5d5;
-}
-
-.d1_over:hover {
-    position: relative;
-}
-
-.gnb-menu li {
-    padding: 10px 0;
-    border-bottom: 3px solid transparent;
-    transition: border-bottom 0.3s ease-out;
-}
-
-.gnb-menu li:hover {
-    border-bottom: 3px solid #222;
-}
-
-.gnb-menu span {
     font-size: 16px;
 }
 
-.nav-d2-box {
-    position: absolute;
-    top: 100%;
-    width: 100%;
-    padding-top: 5px;
-    padding-bottom: 20px;
-    white-space: nowrap;
-    display: none;
-    margin: 0;
+.gnb_d1{
+    padding: 10px;
+    box-sizing: border-box;
 }
 
-.nav-d2-box.show {
-    display: inline-block;
-    width: fit-content;
+.nav-d2-box{
+   visibility: hidden;
+   color: #666;
+   display: flex;
+   position: absolute;
+   top: 100%;
+   left: 45%;
+   width: 100%;
+   padding-top: 5px;
+   padding-bottom: 5px;
+	white-space: nowrap;
 }
 
-.nav-d2 {
-    display: inline-block;
-    vertical-align: middle;
-    white-space: nowrap;
-}
-
-.nav-d2-a {
+header:hover .nav-d2-a{
     display: block;
-    padding: 4px 15px 6px;
-    font-size: 15px;
-    letter-spacing: 0;
+	padding: 4px 15px 6px;
+	color: #aaa;
+	font-size: 15px;
+	letter-spacing: 0;
 }
 
-.nav-d3-box {
-    padding: 5px 15px;
+.nav-d2-box span{
+    display: inline-block;
+}
+
+.nav-d2-box a{
+    padding-top: 9px;
+}
+.gnb .gnb_d1:last-child .nav-d2-box{
+    max-width: 772px;
+    padding: 27px 0 35px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    visibility: hidden;
+}
+
+.bg{
+    width: 100%;
+    background-color: #fff;
+    transition: all 0.5s ease-in-out;
+}
+
+.gnb_d1:hover {
+    border-bottom: 3px solid #222;
+}
+
+.nav-d3-a{
+    color:#000;
+    font-weight:700
 }
 
 /* show/hide */
