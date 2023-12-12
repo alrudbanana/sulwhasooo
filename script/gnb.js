@@ -16,28 +16,36 @@ $(function(){
         bg.css('height', 0)
     });
 
-    const hammenu = $('.hammenu');
+    const hammenu = $('.ham-menu');
     const sidemobilenav = $('.sidenav');
     const wrap = $('.wrap');
-    const hideSideMenu = $('.sideclose');
-    const trigger = $('#trigger');
-    
+    const closeBtn = $('.close-btn');
+    const plus = $('.nav-d1.over .plus');
+    console.log(plus)
+    const contentOver = $('.nav-d2-box')
     function showNav(){
         var count = 0;
         count ++;
         if(count % 2 == 0){
             sidemobilenav.hide();
             wrap.fadeIn();
-        }else if(count %2 == 1){
+        }else if(count % 2 == 1){
             sidemobilenav.fadeIn();
-            wrap.hide();
+            wrap.fadeOut();
         }
     }
+
+    function contentShow(){
+
+    }
     hammenu.on('click',showNav);
-    hideSideMenu.on('click',function(){
+    closeBtn.on('click',function(){
         sidemobilenav.hide();
         wrap.fadeIn();
-        trigger.prop('checked',false);
+    })
+
+    plus.click(function(){
+        $(this).parent().next().toggleClass('active')
     })
 })
 

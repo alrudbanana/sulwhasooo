@@ -10,6 +10,7 @@
 
  
     header{
+        width: 100%;
         position: relative;
     }
 
@@ -20,54 +21,28 @@
         align-items: center;
         padding: 0 20px;
         box-sizing: border-box;
-        position: relative;
+        position: fixed;
+        width: 100vw;
         z-index: 100;
-        background-color: #fff;
+        background-color: transparent;
     }
-    /* ham menu */
-    input[id=trigger] {
-        display: none;
-    }
-    label[for=trigger]{
-        display: block;
-        width: 23px;
-        height: 18px;
+    .ham-menu{
         position: absolute;
+        top: 25%;
         left: 20px;
-        top: 50%;
-        transform:translateY(-50%);
-        cursor: pointer;
-        transition: 0.45s;
+        color: #fff;
     }
-    .ham-menu label[for=trigger] span{
-        position: absolute;
-        height: 1px;
-        width: 100%;
-        background-color: #000;
-        left: 0px;
-        transition: 0.5s;
+    .ham-menu .menu-icon{
+        font-size: 23px;
     }
-    label[for=trigger] span:nth-child(1){
-        top: 0;
+    .logo{
+        
     }
-    label[for=trigger] span:nth-child(2){
-        top: 50%;
+    .logo img{
+        width: 112px;
+        height: 40px;
+        object-fit: contain;
     }
-    label[for=trigger] span:nth-child(3){
-        top: 100%;
-    }
-    input[id=trigger]:checked + label[for=trigger] span:nth-child(1){
-        transform: rotate(45deg);
-        top: 50%; /*중앙에서 만나고 돌아야함*/
-    }
-    input[id=trigger]:checked + label[for=trigger] span:nth-child(2){
-        opacity: 0;
-    }
-    input[id=trigger]:checked + label[for=trigger] span:nth-child(3){
-        transform: rotate(-45deg);
-        top: 50%; /*중앙에서 만나고 돌아야함*/
-    }
-
     /* 검색 */
     .header-link {
         padding-top: 0;
@@ -76,14 +51,17 @@
         top: 20px;
         right: -20px;
     }
-    .header-link>a {
+    .header-link > a {
         display: inline-block;
         font-size: 23px;
         margin: 0;
         padding: 0;
     }
-    .header-link>a:after{
+    .header-link > a:after{
         display: none;
+    }
+    .header-link .search{
+        color: #fff;
     }
     #top-search{
         padding: 10px 20px;
@@ -91,7 +69,6 @@
     /* gnb menu */
     .sidenav{
         display: none;
-        overflow:hidden;
         position: fixed;
         z-index: 1001;
         position: absolute;
@@ -112,41 +89,6 @@
         align-items: center;
         padding: 0 20px;
     }
-    input[id=sideCheck] {
-        display: none;
-    }
-    label[for=sideCheck]{
-        display: block;
-        width: 24px;
-        height: 24px;
-        position: absolute;
-        right: 20px;
-        cursor: pointer;
-        transition: 0.45s;
-    }
-    .sidenav-h label[for=sideCheck] span{
-        position: absolute;
-        height: 1px;
-        width: 100%;
-        background-color: #000;
-        left: 0;
-        transition: 0.5s;
-    }
-    label[for=sideCheck] span:nth-child(1){
-        top: 0;
-    }
-    label[for=sideCheck] span:nth-child(2){
-        top: 100%;
-    }
-    input[id=sideCheck]:checked + label[for=sideCheck] span:nth-child(1){
-        transform: rotate(45deg);
-        top: 50%; /*중앙에서 만나고 돌아야함*/
-    }
-    input[id=sideCheck]:checked + label[for=sideCheck] span:nth-child(2){
-        transform: rotate(-45deg);
-        top: 50%; /*중앙에서 만나고 돌아야함*/
-    }
-
     .sidenav-h:after{
         display: block;
         content: '';
@@ -165,6 +107,12 @@
         background-repeat: no-repeat;
         background-size: contain;
     }
+    .close-btn{
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 23px;
+    }
     .sidenav-wrap{
         position: absolute;
     }
@@ -175,17 +123,45 @@
         height: 100%;
         border: 1px solid red;
     }
-
     .wrap-nav-contents .nav-d1{
         font-size: 23px;
-        font-weight: 300;
+        font-weight: 200;
         margin: 0;
+        position: relative;
     }
-    .wrap-nav-contents .nav-d1:nth-child(1){
-        margin-top: 30px;
+    .wrap-nav-contents .nav-d1:first-child{
+        margin-top: 20px;
+    }
+    .wrap-nav-contents .plus{
+        position: absolute;
+        top: 25%;
+        right: 20px;
+        font-size: 20px;
+        transition: 0.5s;
     }
     .wrap-nav-contents .nav-d1 a{
-        display: block;
+        display: inline-block;
         padding: 12px 0 12px 20px;
+    }
+    .wrap-nav-contents .nav-d2-box{
+        padding: 0 15px;
+        background-color: #FAF9F4;
+    }
+    .wrap-nav-contents .nav-d2-box.active{
+        visibility: visible;
+        position: relative;
+        top: 0;
+        left: 0;
+        display: block;
+        font-size: 19px;
+        font-weight: 500;
+        margin: 0;
+    }
+    .wrap-nav-contents .nav-d2-box.active li{
+        padding: 12px 0 12px 20px;
+        border-bottom: 1px solid #a8a8a8;
+    }
+    .wrap-nav-contents .nav-d2-box.active li:last-child{
+        border: none;
     }
 }

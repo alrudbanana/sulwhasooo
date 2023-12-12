@@ -19,14 +19,13 @@ header {
     justify-content: center;
     height: 78px;
     max-width: 1440px;
-    margin: 0 auto;
     /* 가운데 */
     padding: 0 7%;
     position: relative;
     color: #000;
     font-size: 15px;
 }
-
+ham-menu 
 /* 언어 선택 */
 .select-language {
     position: relative;
@@ -314,13 +313,13 @@ header:hover .nav-d2-a{
 }
 
 .swiper-slide img {
-    width: 100% !important;
-    object-fit: cover !important;
+    width: 100%;
+    /* object-fit: contain !important; */
 }
 
 .swiper-wrapper{
     width: 100%;
-    height: 100%;
+    height: 100vw;
     max-width: 1440px;
 }
 

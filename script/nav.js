@@ -12,7 +12,7 @@ function searchSelect() {
     count++;
 }
 
-searchIcon.addEventListener('click', searchSelect)
+// searchIcon.addEventListener('click', searchSelect)
 closeBox.addEventListener('click',searchSelect)
 
 

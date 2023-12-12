@@ -15,6 +15,8 @@
     <!-- swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- xeicon -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
 </head>
 
 <body>
@@ -23,12 +25,7 @@
             <!-- l-leader -->
             <div class="l_leader">
                 <div class="ham-menu mobile">
-                    <input type="checkbox" id="trigger">
-                    <label for="trigger" class="hammenu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </label>
+                    <i class="xi-bars menu-icon"></i>
                 </div>
                 <div class="select-language pc">
                     <a href="#" class="t_lang">
@@ -77,7 +74,8 @@
                 </div>
                 <span class="logo">
                     <a href="#">
-                        <img src="img/sulwhasoo_orange_logo.png" alt="sulwhasoo">
+                        <img class="pc" src="img/sulwhasoo_orange_logo.png" alt="sulwhasoo">
+                        <img class="mobile" src="img/sulwhasoo_white_logo.png" alt="sulwhasoo">
                     </a>
                 </span>
                 <!-- 매장찾기 -->
@@ -85,7 +83,7 @@
                     <a href="#" class="search-shop pc">매장찾기</a>
                     <a href="#" class="buy pc">구매하기</a>
                     <a href="#" class="h_open_seach">
-                        <i class="fa-solid fa-magnifying-glass search-icon">
+                        <i class="xi-search search">
                         </i>
                     </a>
                 </div>
@@ -657,19 +655,12 @@
             </div>
         </footer> -->
     </div>
-
-    <!-- script -->
-
     <!-- menu tab -->
-    <nav class="sidenav">
+    <nav class="sidenav mobile">
         <div class="sidenav-box">
             <div class="sidenav-h">
                 <a href="#logo"></a>
-                <input type="checkbox" id="sideCheck" checked>
-                    <label for="sideCheck" class="sideclose">
-                        <span></span>
-                        <span></span>
-                    </label>
+                <i class="xi-close-thin close-btn"></i>
             </div>
             <div class="wrap-nav-contents">
                 <div class="nav-list">
@@ -677,26 +668,38 @@
                     <h2 class="nav-d1"><a href="#">자음생</a></h2>
                     <h2 class="nav-d1"><a href="#">진설</a></h2>
                     <h2 class="nav-d1"><a href="#">기프트</a></h2>
-                    <h2 class="nav-d1"><a href="#">제품</a></h2>
+                    <h2 class="nav-d1 over">
+                        <a href="#">제품</a>
+                        <i class="xi-plus-thin plus"></i>
+                    </h2>
                     <ul class="nav-d2-box">
                         <li>스킨케어</li>
                         <li>메이크업</li>
                         <li>남성</li>
                     </ul>
-                    <h2 class="nav-d1"><a href="#">스파</a></h2>
+                    <h2 class="nav-d1 over">
+                        <a href="#">스파</a>
+                        <i class="xi-plus-thin plus"></i>
+                    </h2>
                     <ul class="nav-d2-box">
                         <li>소개</li>
                         <li>스파 프로그램</li>
                         <li>예약</li>
                         <li>매장찾기</li>
                     </ul>
-                    <h2 class="nav-d1"><a href="#">플래그십 스토어</a></h2>
+                    <h2 class="nav-d1 over">
+                        <a href="#">플래그십 스토어</a>
+                        <i class="xi-plus-thin plus"></i>
+                    </h2>
                     <ul class="nav-d2-box">
                         <li>플래그십 스토어</li>
                         <li>설화수 북촌</li>
                         <li>설화수 도산</li>
                     </ul>
-                    <h2 class="nav-d1"><a href="#">ABOUT 설화수</a></h2>
+                    <h2 class="nav-d1 over">
+                        <a href="#">ABOUT 설화수</a>
+                        <i class="xi-plus-thin plus"></i>
+                    </h2>
                     <ul class="nav-d2-box">
                         <li>브랜드 스토리</li>
                         <li>브랜드 엠버서더</li>
