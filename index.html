@@ -22,7 +22,15 @@
         <header>
             <!-- l-leader -->
             <div class="l_leader">
-                <div class="select-language">
+                <div class="ham-menu mobile">
+                    <input type="checkbox" id="trigger">
+                    <label for="trigger" class="hammenu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                </div>
+                <div class="select-language pc">
                     <a href="#" class="t_lang">
                         한국/한국어
                         <i class="fa-solid fa-angle-down select-icon"></i>
@@ -74,21 +82,23 @@
                 </span>
                 <!-- 매장찾기 -->
                 <div class="header-link">
-                    <a href="#" class="search-shop">매장찾기</a>
-                    <a href="#" class="buy">구매하기</a>
+                    <a href="#" class="search-shop pc">매장찾기</a>
+                    <a href="#" class="buy pc">구매하기</a>
                     <a href="#" class="h_open_seach">
                         <i class="fa-solid fa-magnifying-glass search-icon">
                         </i>
                     </a>
                 </div>
+
             </div>
+
             <!-- top search -->
             <div id="top-search" class="search-container" tabindex="-1">
                 <div class="inner-top-search">
                     <form action="#">
                         <div class="wrap-search-box">
                             <div class="search-box">
-                                <label for="q" class="blind">검색</label>
+                                <label for="q" class="hide">검색</label>
                                 <input type="search" autocomplete="off" id="q" class="text" placeholder="검색어를 입력해주세요" />
                                 <button type="button" class="submit">
                                     <span>검색</span>
@@ -103,7 +113,7 @@
                 </div>
             </div>
             <!-- gnb -->
-            <nav class="gnb">
+            <nav class="gnb pc">
                 <div class="menu-wrap">
                     <ul class="gnb-menu">
                         <li class="gnb_d1">
@@ -209,8 +219,8 @@
                                         <span>브랜드 스토리</span>
                                     </a>
                                     <ul class="nav-d3-box">
-                                       <li>브랜드 빌리프</li>
-                                       <li>브랜드 캠페인</li> 
+                                        <li>브랜드 빌리프</li>
+                                        <li>브랜드 캠페인</li>
                                     </ul>
                                 </li>
 
@@ -220,8 +230,8 @@
                                     </a>
                                     <ul class="nav-d3-box">
                                         <li>로제</li>
-                                        <li>틸다 스윈튼</li> 
-                                     </ul>
+                                        <li>틸다 스윈튼</li>
+                                    </ul>
                                 </li>
 
                                 <li class="nav-d2-l">
@@ -231,8 +241,8 @@
 
                                     <ul class="nav-d3-box">
                                         <li>MET</li>
-                                        <li>설화 문화전</li> 
-                                     </ul>
+                                        <li>설화 문화전</li>
+                                    </ul>
                                 </li>
 
                                 <li class="nav-d2-l">
@@ -241,8 +251,8 @@
                                     </a>
                                     <ul class="nav-d3-box">
                                         <li>SINCE 1932</li>
-                                        <li>명작 컬렉션</li> 
-                                     </ul>
+                                        <li>명작 컬렉션</li>
+                                    </ul>
                                 </li>
                             </ul>
 
@@ -331,7 +341,6 @@
                         </div>
                     </div>
 
-                    <!-- 한번에 옮기려고 -->
                     <div class="all-box">
                         <div class="progress-box">
                             <div class="swiper-pagination"></div>
@@ -346,7 +355,6 @@
                 </div>
             </section>
 
-            <!--설화수 추천아이템 -->
             <section class="sul-recommend-sec">
                 <div class="recom-wrap">
                     <div class="swiper subSwiper">
@@ -438,7 +446,6 @@
                 </div>
             </section>
 
-            <!-- best - seller -->
             <section class="best-seller">
                 <div class="best-seller-wrapper">
                     <a>
@@ -455,7 +462,6 @@
                 </div>
             </section>
 
-            <!-- 시즌별 추천 -->
             <section class="season-recommend">
                 <h2>설화수 시즌추천</h2>
                 <div class="seanson-wrapper">
@@ -605,14 +611,14 @@
 
         </main>
 
-        <footer class="footer">
+        <!-- <footer class="footer">
             <div class="l-footer">
                 <div class="go-top-container">
                     <a href="#main" class="go-top">
                         <img src="img/top.png" alt="">
                     </a>
                 </div>
-                <!-- footer 이용약관 -->
+            
                 <div class="footer-links">
                     <div class="footer-links-wrap">
                         <a href="#">회사소개</a>
@@ -644,17 +650,63 @@
                 <div class="footer-legality">
                     <span class="footer-item-copyright">
                         <i class="copy">©</i>
-                        <strong>포트폴리오를 위해 제작된 비 상업용 사이트입니다.</strong> 
+                        <strong>포트폴리오를 위해 제작된 비 상업용 사이트입니다.</strong>
                         AMOREPACIFIC CORPORATION. Allrights reserved.
                     </span>
                 </div>
             </div>
-        </footer>
+        </footer> -->
     </div>
 
     <!-- script -->
-    
-    <!-- header -->
+
+    <!-- menu tab -->
+    <nav class="sidenav">
+        <div class="sidenav-box">
+            <div class="sidenav-h">
+                <a href="#logo"></a>
+                <input type="checkbox" id="sideCheck" checked>
+                    <label for="sideCheck" class="sideclose">
+                        <span></span>
+                        <span></span>
+                    </label>
+            </div>
+            <div class="wrap-nav-contents">
+                <div class="nav-list">
+                    <h2 class="nav-d1"><a href="#">윤조</a></h2>
+                    <h2 class="nav-d1"><a href="#">자음생</a></h2>
+                    <h2 class="nav-d1"><a href="#">진설</a></h2>
+                    <h2 class="nav-d1"><a href="#">기프트</a></h2>
+                    <h2 class="nav-d1"><a href="#">제품</a></h2>
+                    <ul class="nav-d2-box">
+                        <li>스킨케어</li>
+                        <li>메이크업</li>
+                        <li>남성</li>
+                    </ul>
+                    <h2 class="nav-d1"><a href="#">스파</a></h2>
+                    <ul class="nav-d2-box">
+                        <li>소개</li>
+                        <li>스파 프로그램</li>
+                        <li>예약</li>
+                        <li>매장찾기</li>
+                    </ul>
+                    <h2 class="nav-d1"><a href="#">플래그십 스토어</a></h2>
+                    <ul class="nav-d2-box">
+                        <li>플래그십 스토어</li>
+                        <li>설화수 북촌</li>
+                        <li>설화수 도산</li>
+                    </ul>
+                    <h2 class="nav-d1"><a href="#">ABOUT 설화수</a></h2>
+                    <ul class="nav-d2-box">
+                        <li>브랜드 스토리</li>
+                        <li>브랜드 엠버서더</li>
+                        <li>ART</li>
+                        <li>HERITAGE</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
     <!-- menu script -->
     <script src="./script/tab_menu.js"></script>
     <!-- nav -->

@@ -16,6 +16,29 @@ $(function(){
         bg.css('height', 0)
     });
 
+    const hammenu = $('.hammenu');
+    const sidemobilenav = $('.sidenav');
+    const wrap = $('.wrap');
+    const hideSideMenu = $('.sideclose');
+    const trigger = $('#trigger');
+    
+    function showNav(){
+        var count = 0;
+        count ++;
+        if(count % 2 == 0){
+            sidemobilenav.hide();
+            wrap.fadeIn();
+        }else if(count %2 == 1){
+            sidemobilenav.fadeIn();
+            wrap.hide();
+        }
+    }
+    hammenu.on('click',showNav);
+    hideSideMenu.on('click',function(){
+        sidemobilenav.hide();
+        wrap.fadeIn();
+        trigger.prop('checked',false);
+    })
 })
 
 

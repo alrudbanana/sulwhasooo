@@ -1,0 +1,188 @@
+@media screen and (max-width:767px) {
+    /* 767까지만 적용 */
+    .mobile{
+        display: block;
+    }
+
+    .pc{
+        display: none !important;
+    }
+
+ 
+    header{
+        position: relative;
+    }
+
+    /* design - header*/
+    .l_leader{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px;
+        box-sizing: border-box;
+        position: relative;
+        z-index: 100;
+        background-color: #fff;
+    }
+    /* ham menu */
+    input[id=trigger] {
+        display: none;
+    }
+    label[for=trigger]{
+        display: block;
+        width: 23px;
+        height: 18px;
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform:translateY(-50%);
+        cursor: pointer;
+        transition: 0.45s;
+    }
+    .ham-menu label[for=trigger] span{
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        background-color: #000;
+        left: 0px;
+        transition: 0.5s;
+    }
+    label[for=trigger] span:nth-child(1){
+        top: 0;
+    }
+    label[for=trigger] span:nth-child(2){
+        top: 50%;
+    }
+    label[for=trigger] span:nth-child(3){
+        top: 100%;
+    }
+    input[id=trigger]:checked + label[for=trigger] span:nth-child(1){
+        transform: rotate(45deg);
+        top: 50%; /*중앙에서 만나고 돌아야함*/
+    }
+    input[id=trigger]:checked + label[for=trigger] span:nth-child(2){
+        opacity: 0;
+    }
+    input[id=trigger]:checked + label[for=trigger] span:nth-child(3){
+        transform: rotate(-45deg);
+        top: 50%; /*중앙에서 만나고 돌아야함*/
+    }
+
+    /* 검색 */
+    .header-link {
+        padding-top: 0;
+        text-align: left;
+        position: absolute;
+        top: 20px;
+        right: -20px;
+    }
+    .header-link>a {
+        display: inline-block;
+        font-size: 23px;
+        margin: 0;
+        padding: 0;
+    }
+    .header-link>a:after{
+        display: none;
+    }
+    #top-search{
+        padding: 10px 20px;
+    }
+    /* gnb menu */
+    .sidenav{
+        display: none;
+        overflow:hidden;
+        position: fixed;
+        z-index: 1001;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        transition: all 0.5s;
+    }
+    .sidenav-h{
+        width: 100%;
+        height: 60px;
+        font-size: 1em;
+        line-height: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+    input[id=sideCheck] {
+        display: none;
+    }
+    label[for=sideCheck]{
+        display: block;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        right: 20px;
+        cursor: pointer;
+        transition: 0.45s;
+    }
+    .sidenav-h label[for=sideCheck] span{
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        background-color: #000;
+        left: 0;
+        transition: 0.5s;
+    }
+    label[for=sideCheck] span:nth-child(1){
+        top: 0;
+    }
+    label[for=sideCheck] span:nth-child(2){
+        top: 100%;
+    }
+    input[id=sideCheck]:checked + label[for=sideCheck] span:nth-child(1){
+        transform: rotate(45deg);
+        top: 50%; /*중앙에서 만나고 돌아야함*/
+    }
+    input[id=sideCheck]:checked + label[for=sideCheck] span:nth-child(2){
+        transform: rotate(-45deg);
+        top: 50%; /*중앙에서 만나고 돌아야함*/
+    }
+
+    .sidenav-h:after{
+        display: block;
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 59px;
+        width: 100%;
+        height: 1px;
+        background-color: #eee;
+    }
+    .sidenav-h a{
+        display: inline-block;
+        width: 112px;
+        height: 40px;
+        background-image: url(../img/sulwhasoo_orange_logo.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .sidenav-wrap{
+        position: absolute;
+    }
+    .sidenav-menu{
+        display: block;
+        flex-direction: column;
+        max-width: 100vw;
+        height: 100%;
+        border: 1px solid red;
+    }
+
+    .wrap-nav-contents .nav-d1{
+        font-size: 23px;
+        font-weight: 500;
+        margin: 0;
+    }
+    .wrap-nav-contents .nav-d1 a{
+        display: block;
+        padding: 12px 0 12px 20px;
+    }
+}
