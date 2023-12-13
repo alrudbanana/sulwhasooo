@@ -39,15 +39,23 @@ playButton.addEventListener('click', function () {
 var subSwiper = new Swiper(".subSwiper", {
   slidesPerView: '3',
   spaceBetween: 24,
-  pagination: {
-    el: ".swiper-pagination",
-    type: "progressbar",
-  },
   loop: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  breakpoints: {
+    // 화면의 넓이가 320px 이상일 때
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20
+    },
+    // 화면의 넓이가 640px 이상일 때
+    640: {
+      slidesPerView: 3,
+      spaceBetween: 24
+    }
+  }
 });
 
 // instar Swiper

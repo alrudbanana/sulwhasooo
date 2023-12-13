@@ -24,7 +24,6 @@ header {
     position: relative;
     color: #000;
     font-size: 15px;
-    border: 1px solid red;
 }
 /* select Language */
 .select-language {
@@ -459,11 +458,12 @@ header:hover .nav-d2-a{
 }
 
 .slide-imgWrapper img{
-    width: 448px !important;
+    width: 448px;
     height: 448px;
 }
 
-.subSwiper .pagination-container .pagination-container__inner{
+.subSwiper .pagination-container 
+.pagination-container__inner{
     display: flex;
     align-items: center;
     justify-content: center;
