@@ -1,6 +1,5 @@
 $(function(){
     const gnb_d1 = $('.d1_over');
-    const navD2Box = $('.nav-d2-box');
     const bg = $('.bg');
 
     gnb_d1.mouseenter(function(){
@@ -46,6 +45,18 @@ $(function(){
 
     plus.click(function(){
         $(this).parent().next().toggleClass('active')
+    })
+
+    //헤더에 마우스 올라가면 로고 이미지 변경 
+    const header = $('header')
+    const logImg = $('.logo .pc')
+    const logoImgUrl = 'img/sulwhasoo_orange_logo.png'
+    const WhitelogoImgUrl = 'img/sulwhasoo_white_logo.png'
+    header.mouseenter(function(){
+        logImg.attr('src', logoImgUrl)
+    })
+    header.mouseleave(function(){
+        logImg.attr('src', WhitelogoImgUrl)
     })
 })
 

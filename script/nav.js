@@ -1,6 +1,7 @@
 const container = document.querySelector('#top-search')
-const searchIcon = document.querySelector('.search-icon')
+const searchIcon = document.querySelector('.h_open_seach')
 const closeBox = document.querySelector('.close')
+
 
 function searchSelect() {
     if (count % 2 == 0) {
@@ -12,7 +13,7 @@ function searchSelect() {
     count++;
 }
 
-// searchIcon.addEventListener('click', searchSelect)
+searchIcon.addEventListener('click', searchSelect)
 closeBox.addEventListener('click',searchSelect)
 
 
