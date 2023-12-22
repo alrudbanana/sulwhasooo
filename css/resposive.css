@@ -355,6 +355,9 @@
         font-size: 14px;
     }
     /* 시즌추천 */
+    .season-item-box{
+        margin: 0;
+    }
     .season-recommend{
         margin-top: 98px;
         padding: 0 20px;
@@ -366,18 +369,22 @@
     .season-item-box-1,.season-item-box-2, .season-item-box-3{
         width: 100%;
     }
+    .img-wrapper img{
+        width: 100%;
+        height: 100%;
+    }
     .season-item-box-1, .season-item-box-3{
         background-color: #fff;
     }
     .season-item-box-2{
         flex: 1;
+        margin-right: 10px;
     }
     .season-item-box-3{
         flex:1
     }
     .season-recommend .season-item-wrapper a{
         display: block;
-        width: 135px;
         height: 230px;
     }
     .season-recommend .season-item-wrapper img{
@@ -401,6 +408,11 @@
     }
     .season-item-wrapper{
         display: flex;
+    }
+    .img-wrapper img{
+        display: block;
+        width: 100%;
+        height: 100%;
     }
     /* store */
     .store{
