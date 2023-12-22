@@ -430,10 +430,14 @@
     }
 
     /* footer */
+    footer{
+        position: static;
+    }
     .l-footer{
         padding: 20px;
         margin: 0;
         position: relative;
+        height: 55px;
     }
     .footer-sns-wrap{
         position: absolute;
@@ -451,5 +455,7 @@
     }
     .footer-legality span{
         display: block;
+        position: absolute;
+        bottom: 0;
     }
 }
