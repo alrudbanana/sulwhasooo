@@ -51,7 +51,7 @@
         height: 40px;
         object-fit: contain;
     }
-
+ 
     /* 검색 */
     .header-link {
         padding-top: 0;
@@ -264,13 +264,13 @@
         display: flex;
         text-align: center;
         flex-direction: column;
-         position: absolute;
-         width: 100%;
-         top: 20%;
-         left: 0;
-         transition: all 0.8s;
-         animation: text-animation 3s;
-         animation-delay: .5s;
+        position: absolute;
+        width: 100%;
+        top: 20%;
+        left: 0;
+        transition: all 0.8s;
+        animation: text-animation 3s;
+        animation-delay: .5s;
      }
      .text-wrapper p{
         font-size: 14px;
@@ -321,5 +321,135 @@
     }
     .text-price{
         font-weight: 300;
+    }
+    /* bestseller */
+    .best-seller{
+        margin-top: 98px;
+    }
+    .best-seller-wrapper{}
+    .best-seller-wrapper a{
+        display: block;
+        height: 367.5px;
+        position: relative;
+    }
+    .best-seller img{
+        position: absolute;
+        display: block;
+        height: 100%;
+        object-fit: cover;
+        object-position: 60%;
+    }
+    .best-detail-text{
+        position: absolute;
+        bottom: 15px;
+    }
+    .best-detail-text h3{
+        font-size: 23px;
+        font-weight: 500;
+        padding: 0;
+        margin: 0;
+    }
+    .best-detail-text span{
+        padding-top: 1px;
+        font-weight: 300;
+        font-size: 14px;
+    }
+    /* 시즌추천 */
+    .season-recommend{
+        margin-top: 98px;
+        padding: 0 20px;
+    }
+    .seanson-wrapper{
+        height: 100%;
+        flex-direction: column;
+    }
+    .season-item-box-1,.season-item-box-2, .season-item-box-3{
+        width: 100%;
+    }
+    .season-item-box-1, .season-item-box-3{
+        background-color: #fff;
+    }
+    .season-item-box-2{
+        flex: 1;
+    }
+    .season-item-box-3{
+        flex:1
+    }
+    .season-recommend .season-item-wrapper a{
+        display: block;
+        width: 135px;
+        height: 230px;
+    }
+    .season-recommend .season-item-wrapper img{
+        width:100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .season-recommend .text-wrapper h4, .text-wrapper p{
+        position: relative;
+        color: #222;
+        text-align: center;
+    }
+    .season-recommend .text-wrapper{
+        position: relative;
+    }
+    .season-recommend .text-wrapper span{
+        padding: 0;
+        font-size: 14px;
+        text-align: center;
+        color: #222;
+    }
+    .season-item-wrapper{
+        display: flex;
+    }
+    /* store */
+    .store{
+        padding: 0;
+    }
+    .store-container{
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+    .store-list-item{
+        margin: 0;
+    }
+    .store-list{
+        flex-direction: column;
+    }
+    .store-list h2{
+        font-size: 22px;
+    }
+    .store-list button{
+        margin: 0;
+    }
+    .store-list img{
+        width: 100%;
+    }
+    .store-list-item:first-child{
+        margin-bottom: 45px;
+    }
+
+    /* footer */
+    .l-footer{
+        padding: 20px;
+        margin: 0;
+        position: relative;
+    }
+    .footer-sns-wrap{
+        position: absolute;
+        top: 0;
+        right: 20%;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-sns{
+        padding: 0;
+    }
+    .footer-legality{
+        display: block;
+        height: 100%;
+    }
+    .footer-legality span{
+        display: block;
     }
 }
